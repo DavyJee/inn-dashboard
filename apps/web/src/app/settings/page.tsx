@@ -36,7 +36,16 @@ export default function SettingsPage() {
   }
 
   async function triggerCrawl() {
-    alert('静态演示模式：手动抓取功能需要连接后端服务');
+    setCrawling(true);
+    try {
+      await apiFetch('/api/crawler/trigger', { method: 'POST' });
+      alert('抓取任务已触发');
+      loadLogs();
+    } catch (err: any) {
+      alert('触发失败: ' + err.message);
+    } finally {
+      setCrawling(false);
+    }
   }
 
   return (

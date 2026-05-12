@@ -40,13 +40,23 @@ export default function InnsPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    alert('静态演示模式：添加功能需要连接后端服务');
-    setShowForm(false);
+    try {
+      await apiFetch('/api/inns', {
+        method: 'POST',
+        body: JSON.stringify({ ...form, totalRooms: Number(form.totalRooms) }),
+      });
+      setShowForm(false);
+      setForm({ name: '', platform: 'booking', platformId: '', url: '', totalRooms: '', location: '' });
+      loadInns();
+    } catch (err: any) {
+      alert('添加失败: ' + err.message);
+    }
   }
 
   async function deleteInn(id: number) {
     if (!confirm('确定删除此民宿？')) return;
-    alert('静态演示模式：删除功能需要连接后端服务');
+    await apiFetch(`/api/inns/${id}`, { method: 'DELETE' });
+    loadInns();
   }
 
   if (loading) return <div className="text-center py-20 text-slate-400">加载中...</div>;
@@ -129,7 +139,7 @@ export default function InnsPage() {
                 <ExternalLink className="w-3 h-3" />
                 查看
               </a>
-              <a href={`./inns/detail?id=${inn.id}`} className="flex items-center gap-1 px-3 py-1.5 text-xs bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200">
+              <a href={`/inns/${inn.id}`} className="flex items-center gap-1 px-3 py-1.5 text-xs bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200">
                 <Edit2 className="w-3 h-3" />
                 详情
               </a>
