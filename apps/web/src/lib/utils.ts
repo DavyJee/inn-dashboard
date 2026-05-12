@@ -27,6 +27,8 @@ const DYNAMIC_PATTERNS: { pattern: RegExp; path: string }[] = [
   { pattern: /^\/api\/inns\/\d+\/prices/, path: '/data/inn-prices-1.json' },
 ];
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 function getStaticPath(apiPath: string): string | null {
   // 精确匹配
   if (STATIC_DATA_MAP[apiPath]) return STATIC_DATA_MAP[apiPath];
@@ -44,9 +46,10 @@ export async function apiFetch(path: string, options?: RequestInit) {
   // 如果是静态导出模式，读取本地 JSON
   const staticPath = getStaticPath(path);
   if (staticPath && (!options || options.method === undefined || options.method === 'GET')) {
-    const res = await fetch(staticPath);
+    const fullPath = BASE_PATH ? `${BASE_PATH}${staticPath}` : staticPath;
+    const res = await fetch(fullPath);
     if (!res.ok) {
-      throw new Error(`Static data not found: ${staticPath}`);
+      throw new Error(`Static data not found: ${fullPath}`);
     }
     return res.json();
   }
