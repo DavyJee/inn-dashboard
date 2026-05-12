@@ -139,7 +139,7 @@ export default function InnsPage() {
                 <ExternalLink className="w-3 h-3" />
                 查看
               </a>
-              <a href={`/inns/${inn.id}`} className="flex items-center gap-1 px-3 py-1.5 text-xs bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200">
+              <a href={`./inns/detail?id=${inn.id}`} className="flex items-center gap-1 px-3 py-1.5 text-xs bg-primary-100 text-primary-700 rounded-lg hover:bg-primary-200">
                 <Edit2 className="w-3 h-3" />
                 详情
               </a>

@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
+import { useEffect, useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { apiFetch } from '@/lib/utils';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
@@ -30,9 +30,9 @@ interface Inn {
   location: string;
 }
 
-export default function InnDetailPage() {
-  const params = useParams();
-  const id = Number(params.id);
+function InnDetailContent() {
+  const searchParams = useSearchParams();
+  const id = Number(searchParams.get('id')) || 1;
   const [inn, setInn] = useState<Inn | null>(null);
   const [availabilities, setAvailabilities] = useState<Availability[]>([]);
   const [prices, setPrices] = useState<Price[]>([]);
@@ -151,5 +151,13 @@ export default function InnDetailPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function InnDetailPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-slate-400">加载中...</div>}>
+      <InnDetailContent />
+    </Suspense>
   );
 }

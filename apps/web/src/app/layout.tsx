@@ -18,12 +18,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="text-xs px-2 py-0.5 bg-primary-100 text-primary-700 rounded-full">Beta</span>
               </div>
               <div className="flex items-center gap-4 text-sm">
-                <a href="/" className="text-slate-600 hover:text-primary-600">仪表盘</a>
-                <a href="/inns" className="text-slate-600 hover:text-primary-600">民宿</a>
-                <a href="/compare" className="text-slate-600 hover:text-primary-600">竞品</a>
-                <a href="/history" className="text-slate-600 hover:text-primary-600">历史</a>
-                <a href="/alerts" className="text-slate-600 hover:text-primary-600">告警</a>
-                <a href="/settings" className="text-slate-600 hover:text-primary-600">设置</a>
+                <a href="./" className="text-slate-600 hover:text-primary-600">仪表盘</a>
+                <a href="./inns" className="text-slate-600 hover:text-primary-600">民宿</a>
+                <a href="./compare" className="text-slate-600 hover:text-primary-600">竞品</a>
+                <a href="./history" className="text-slate-600 hover:text-primary-600">历史</a>
+                <a href="./alerts" className="text-slate-600 hover:text-primary-600">告警</a>
+                <a href="./settings" className="text-slate-600 hover:text-primary-600">设置</a>
               </div>
             </div>
           </div>
