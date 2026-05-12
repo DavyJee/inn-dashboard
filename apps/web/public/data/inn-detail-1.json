@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "name": "沐居民宿",
+  "platform": "booking",
+  "platformId": "august-bliss",
+  "url": "https://www.booking.com/hotel/cn/august-bliss.html",
+  "totalRooms": 8,
+  "location": "杭州九溪",
+  "isActive": true,
+  "createdAt": "2024-01-15T08:00:00Z"
+}

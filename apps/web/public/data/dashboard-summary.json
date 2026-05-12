@@ -1,0 +1,66 @@
+{
+  "totalInns": 4,
+  "totalRooms": 36,
+  "totalBooked": 28,
+  "avgOccupancy": 77.8,
+  "todayData": [
+    {
+      "innId": 1,
+      "innName": "沐居民宿",
+      "platform": "booking",
+      "availableRooms": 2,
+      "totalRooms": 8,
+      "bookedRooms": 6,
+      "occupancyRate": 75.0,
+      "lowestPrice": 580
+    },
+    {
+      "innId": 2,
+      "innName": "云栖小筑",
+      "platform": "ctrip",
+      "availableRooms": 4,
+      "totalRooms": 12,
+      "bookedRooms": 8,
+      "occupancyRate": 66.7,
+      "lowestPrice": 420
+    },
+    {
+      "innId": 3,
+      "innName": "茶语山居",
+      "platform": "tujia",
+      "availableRooms": 0,
+      "totalRooms": 6,
+      "bookedRooms": 6,
+      "occupancyRate": 100.0,
+      "lowestPrice": 680
+    },
+    {
+      "innId": 4,
+      "innName": "西湖雅舍",
+      "platform": "booking",
+      "availableRooms": 2,
+      "totalRooms": 10,
+      "bookedRooms": 8,
+      "occupancyRate": 80.0,
+      "lowestPrice": 520
+    }
+  ],
+  "recentAlerts": [
+    {
+      "id": 1,
+      "type": "满房告警",
+      "innId": 3,
+      "message": "茶语山居今日已满房（6/6）",
+      "severity": "medium",
+      "createdAt": "2026-05-12T06:30:00Z"
+    },
+    {
+      "id": 2,
+      "type": "价格异动",
+      "innId": 1,
+      "message": "沐居民宿最低价上涨至 ¥580",
+      "severity": "low",
+      "createdAt": "2026-05-12T08:00:00Z"
+    }
+  ]
+}

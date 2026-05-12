@@ -40,23 +40,13 @@ export default function InnsPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    try {
-      await apiFetch('/api/inns', {
-        method: 'POST',
-        body: JSON.stringify({ ...form, totalRooms: Number(form.totalRooms) }),
-      });
-      setShowForm(false);
-      setForm({ name: '', platform: 'booking', platformId: '', url: '', totalRooms: '', location: '' });
-      loadInns();
-    } catch (err: any) {
-      alert('添加失败: ' + err.message);
-    }
+    alert('静态演示模式：添加功能需要连接后端服务');
+    setShowForm(false);
   }
 
   async function deleteInn(id: number) {
     if (!confirm('确定删除此民宿？')) return;
-    await apiFetch(`/api/inns/${id}`, { method: 'DELETE' });
-    loadInns();
+    alert('静态演示模式：删除功能需要连接后端服务');
   }
 
   if (loading) return <div className="text-center py-20 text-slate-400">加载中...</div>;

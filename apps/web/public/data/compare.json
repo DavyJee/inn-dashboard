@@ -1,0 +1,49 @@
+{
+  "date": "2026-05-12",
+  "data": [
+    {
+      "innId": 1,
+      "name": "沐居民宿",
+      "platform": "booking",
+      "location": "杭州九溪",
+      "totalRooms": 8,
+      "availableRooms": 2,
+      "bookedRooms": 6,
+      "occupancyRate": 75.0,
+      "lowestPrice": 580
+    },
+    {
+      "innId": 2,
+      "name": "云栖小筑",
+      "platform": "ctrip",
+      "location": "杭州灵隐",
+      "totalRooms": 12,
+      "availableRooms": 4,
+      "bookedRooms": 8,
+      "occupancyRate": 66.7,
+      "lowestPrice": 420
+    },
+    {
+      "innId": 3,
+      "name": "茶语山居",
+      "platform": "tujia",
+      "location": "杭州龙井",
+      "totalRooms": 6,
+      "availableRooms": 0,
+      "bookedRooms": 6,
+      "occupancyRate": 100.0,
+      "lowestPrice": 680
+    },
+    {
+      "innId": 4,
+      "name": "西湖雅舍",
+      "platform": "booking",
+      "location": "杭州西湖",
+      "totalRooms": 10,
+      "availableRooms": 2,
+      "bookedRooms": 8,
+      "occupancyRate": 80.0,
+      "lowestPrice": 520
+    }
+  ]
+}

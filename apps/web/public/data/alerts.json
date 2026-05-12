@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "type": "满房告警",
+    "innId": 3,
+    "message": "茶语山居今日已满房（6/6）",
+    "severity": "medium",
+    "isResolved": false,
+    "createdAt": "2026-05-12T06:30:00Z",
+    "inn": { "name": "茶语山居" }
+  },
+  {
+    "id": 2,
+    "type": "价格异动",
+    "innId": 1,
+    "message": "沐居民宿最低价上涨至 ¥580",
+    "severity": "low",
+    "isResolved": false,
+    "createdAt": "2026-05-12T08:00:00Z",
+    "inn": { "name": "沐居民宿" }
+  },
+  {
+    "id": 3,
+    "type": "预订率下降",
+    "innId": 2,
+    "message": "云栖小筑预订率降至 45%，低于周均值",
+    "severity": "medium",
+    "isResolved": true,
+    "createdAt": "2026-05-10T14:20:00Z",
+    "inn": { "name": "云栖小筑" }
+  },
+  {
+    "id": 4,
+    "type": "抓取失败",
+    "innId": null,
+    "message": "携程平台登录状态失效，抓取中断",
+    "severity": "high",
+    "isResolved": true,
+    "createdAt": "2026-05-09T02:15:00Z",
+    "inn": null
+  },
+  {
+    "id": 5,
+    "type": "满房告警",
+    "innId": 4,
+    "message": "西湖雅舍周末满房预警（9/10）",
+    "severity": "low",
+    "isResolved": false,
+    "createdAt": "2026-05-11T10:00:00Z",
+    "inn": { "name": "西湖雅舍" }
+  }
+]

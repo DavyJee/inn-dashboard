@@ -1,0 +1,47 @@
+{
+  "period": "yearly",
+  "label": "本年（2026-01-01 至 2026-05-12）",
+  "start": "2026-01-01",
+  "end": "2026-05-12",
+  "innStats": [
+    {
+      "innId": 1,
+      "name": "沐居民宿",
+      "platform": "booking",
+      "avgOccupancy": 68.4,
+      "avgPrice": 545,
+      "recordCount": 132
+    },
+    {
+      "innId": 2,
+      "name": "云栖小筑",
+      "platform": "ctrip",
+      "avgOccupancy": 62.1,
+      "avgPrice": 415,
+      "recordCount": 132
+    },
+    {
+      "innId": 3,
+      "name": "茶语山居",
+      "platform": "tujia",
+      "avgOccupancy": 78.5,
+      "avgPrice": 635,
+      "recordCount": 132
+    },
+    {
+      "innId": 4,
+      "name": "西湖雅舍",
+      "platform": "booking",
+      "avgOccupancy": 71.2,
+      "avgPrice": 498,
+      "recordCount": 132
+    }
+  ],
+  "dailyTrend": [
+    {"date": "2026-01", "occupancyRate": 52.3},
+    {"date": "2026-02", "occupancyRate": 58.7},
+    {"date": "2026-03", "occupancyRate": 65.4},
+    {"date": "2026-04", "occupancyRate": 72.1},
+    {"date": "2026-05", "occupancyRate": 78.6}
+  ]
+}

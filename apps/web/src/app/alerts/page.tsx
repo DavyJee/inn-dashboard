@@ -38,14 +38,12 @@ export default function AlertsPage() {
   }
 
   async function resolveAlert(id: number) {
-    await apiFetch(`/api/alerts/${id}/resolve`, { method: 'PUT' });
-    loadAlerts();
+    alert('静态演示模式：处理功能需要连接后端服务');
   }
 
   async function deleteAlert(id: number) {
     if (!confirm('确定删除此告警？')) return;
-    await apiFetch(`/api/alerts/${id}`, { method: 'DELETE' });
-    loadAlerts();
+    alert('静态演示模式：删除功能需要连接后端服务');
   }
 
   if (loading) return <div className="text-center py-20 text-slate-400">加载中...</div>;

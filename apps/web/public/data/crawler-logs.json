@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "platform": "booking",
+    "status": "success",
+    "recordCount": 16,
+    "errorMessage": null,
+    "startedAt": "2026-05-12T18:00:00Z",
+    "completedAt": "2026-05-12T18:02:30Z"
+  },
+  {
+    "id": 2,
+    "platform": "ctrip",
+    "status": "success",
+    "recordCount": 12,
+    "errorMessage": null,
+    "startedAt": "2026-05-12T12:00:00Z",
+    "completedAt": "2026-05-12T12:03:15Z"
+  },
+  {
+    "id": 3,
+    "platform": "tujia",
+    "status": "success",
+    "recordCount": 8,
+    "errorMessage": null,
+    "startedAt": "2026-05-12T06:00:00Z",
+    "completedAt": "2026-05-12T06:01:45Z"
+  },
+  {
+    "id": 4,
+    "platform": "booking",
+    "status": "success",
+    "recordCount": 16,
+    "errorMessage": null,
+    "startedAt": "2026-05-11T18:00:00Z",
+    "completedAt": "2026-05-11T18:02:10Z"
+  },
+  {
+    "id": 5,
+    "platform": "ctrip",
+    "status": "failed",
+    "recordCount": 0,
+    "errorMessage": "登录验证失败，需要重新配置Cookie",
+    "startedAt": "2026-05-11T12:00:00Z",
+    "completedAt": "2026-05-11T12:00:30Z"
+  }
+]

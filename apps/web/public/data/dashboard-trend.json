@@ -1,0 +1,18 @@
+{
+  "trend": [
+    {"date": "2026-04-28", "occupancyRate": 65.2, "totalBooked": 22, "totalRooms": 34},
+    {"date": "2026-04-29", "occupancyRate": 68.4, "totalBooked": 24, "totalRooms": 35},
+    {"date": "2026-04-30", "occupancyRate": 82.1, "totalBooked": 28, "totalRooms": 34},
+    {"date": "2026-05-01", "occupancyRate": 91.7, "totalBooked": 33, "totalRooms": 36},
+    {"date": "2026-05-02", "occupancyRate": 94.4, "totalBooked": 34, "totalRooms": 36},
+    {"date": "2026-05-03", "occupancyRate": 88.9, "totalBooked": 32, "totalRooms": 36},
+    {"date": "2026-05-04", "occupancyRate": 72.2, "totalBooked": 26, "totalRooms": 36},
+    {"date": "2026-05-05", "occupancyRate": 61.1, "totalBooked": 22, "totalRooms": 36},
+    {"date": "2026-05-06", "occupancyRate": 58.3, "totalBooked": 21, "totalRooms": 36},
+    {"date": "2026-05-07", "occupancyRate": 63.9, "totalBooked": 23, "totalRooms": 36},
+    {"date": "2026-05-08", "occupancyRate": 69.4, "totalBooked": 25, "totalRooms": 36},
+    {"date": "2026-05-09", "occupancyRate": 77.8, "totalBooked": 28, "totalRooms": 36},
+    {"date": "2026-05-10", "occupancyRate": 75.0, "totalBooked": 27, "totalRooms": 36},
+    {"date": "2026-05-11", "occupancyRate": 80.6, "totalBooked": 29, "totalRooms": 36}
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "name": "沐居民宿",
+    "platform": "booking",
+    "platformId": "august-bliss",
+    "url": "https://www.booking.com/hotel/cn/august-bliss.html",
+    "totalRooms": 8,
+    "location": "杭州九溪",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": 2,
+    "name": "云栖小筑",
+    "platform": "ctrip",
+    "platformId": "yunqi-xiaozhu",
+    "url": "https://hotels.ctrip.com/hotel/12345678.html",
+    "totalRooms": 12,
+    "location": "杭州灵隐",
+    "isActive": true,
+    "createdAt": "2024-02-20T10:00:00Z"
+  },
+  {
+    "id": 3,
+    "name": "茶语山居",
+    "platform": "tujia",
+    "platformId": "chayu-shanju",
+    "url": "https://www.tujia.com/detail/12345.htm",
+    "totalRooms": 6,
+    "location": "杭州龙井",
+    "isActive": true,
+    "createdAt": "2024-03-10T14:00:00Z"
+  },
+  {
+    "id": 4,
+    "name": "西湖雅舍",
+    "platform": "booking",
+    "platformId": "xihu-yashe",
+    "url": "https://www.booking.com/hotel/cn/xihu-yashe.html",
+    "totalRooms": 10,
+    "location": "杭州西湖",
+    "isActive": true,
+    "createdAt": "2024-04-05T09:00:00Z"
+  }
+]
