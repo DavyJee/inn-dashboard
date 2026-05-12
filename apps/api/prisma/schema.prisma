@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Inn {
+  id          Int      @id @default(autoincrement())
+  name        String
+  platform    String
+  platformId  String   @unique
+  url         String
+  totalRooms  Int
+  location    String
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  availabilities RoomAvailability[]
+  prices         PriceHistory[]
+  alerts         Alert[]
+
+  @@index([platform])
+  @@index([isActive])
+}
+
+model RoomAvailability {
+  id             Int      @id @default(autoincrement())
+  innId          Int
+  date           DateTime
+  availableRooms Int
+  totalRooms     Int
+  bookedRooms    Int
+  occupancyRate  Float
+  lowestPrice    Float?
+  capturedAt     DateTime @default(now())
+
+  inn Inn @relation(fields: [innId], references: [id], onDelete: Cascade)
+
+  @@index([innId, date])
+  @@index([capturedAt])
+  @@index([date])
+}
+
+model PriceHistory {
+  id         Int      @id @default(autoincrement())
+  innId      Int
+  date       DateTime
+  price      Float
+  roomType   String?
+  capturedAt DateTime @default(now())
+
+  inn Inn @relation(fields: [innId], references: [id], onDelete: Cascade)
+
+  @@index([innId, date])
+  @@index([date])
+}
+
+model Alert {
+  id         Int       @id @default(autoincrement())
+  type       String
+  innId      Int?
+  message    String
+  severity   String
+  isResolved Boolean   @default(false)
+  createdAt  DateTime  @default(now())
+  resolvedAt DateTime?
+
+  inn Inn? @relation(fields: [innId], references: [id], onDelete: SetNull)
+
+  @@index([innId])
+  @@index([isResolved])
+  @@index([createdAt])
+}
+
+model CaptureLog {
+  id           Int       @id @default(autoincrement())
+  platform     String
+  status       String
+  recordCount  Int       @default(0)
+  errorMessage String?
+  startedAt    DateTime
+  completedAt  DateTime?
+
+  @@index([platform])
+  @@index([status])
+  @@index([startedAt])
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  isAdmin   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
